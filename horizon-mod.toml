@@ -27,6 +27,7 @@ authors = ["Basicprogrammer10", "sparticle"]
 license = "MIT"
 homepage = "https://github.com/Sparticle62ops/horizon-auto-reauth"
 api = "0.2"
+capabilities = ["registries"]
 namespaces = ["auto-reauth"]
 side = "client"
 
