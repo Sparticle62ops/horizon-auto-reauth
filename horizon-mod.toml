@@ -1,0 +1,36 @@
+id = "auto_reauth"
+name = "Auto Reauth"
+version = "1.0.0"
+description = """A Rust port of [Auto Reauth](https://github.com/Basicprogrammer10/auto-reauth)
+(Basicprogrammer10, MIT): automatically refreshes an expiring Microsoft
+session before a server kick, with the same OAuth client so a login made
+with the original keeps working, the stored account in
+config/auto-reauth/config.json, the status words and the token-expiry
+check carried 1:1.
+
+The 1:1 core (the command grammar, form encoding, the OAuth authorize and
+token bodies, the Xbox/XSTS/Minecraft chain parsers, the profile call,
+the status mapping and the JWT expiry check) runs inside the mod API
+wiring. The outbound-IO surface (the HTTP calls, the browser open and the
+localhost callback listener, the port's HostSeam) and the /autoreauth and
+/reauth chat commands wait on carrier hooks in the mod API; the grammar
+and parsing carry 1:1 with tests.
+
+Pinned to Horizon f00125f61f794aaa3d4e950d301f353b35b6ee3d and
+horizon-mixins e59da9094f0c2fdda6c627fe9eff22dec6a906f0; exact 1:1 Rust
+port tested against those revisions.
+
+Licence: MIT. Upstream (c) Basicprogrammer10.
+Source: https://github.com/Sparticle62ops/horizon-auto-reauth
+"""
+authors = ["Basicprogrammer10", "sparticle"]
+license = "MIT"
+homepage = "https://github.com/Sparticle62ops/horizon-auto-reauth"
+api = "0.2"
+namespaces = ["auto-reauth"]
+side = "client"
+
+[native]
+game = "26.3"
+horizon = "f00125f61f794aaa3d4e950d301f353b35b6ee3d"
+mixins = "e59da9094f0c2fdda6c627fe9eff22dec6a906f0"
